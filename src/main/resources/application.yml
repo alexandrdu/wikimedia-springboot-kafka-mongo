@@ -1,0 +1,7 @@
+my:
+    tutorial:
+        wikimedia:
+            kafka:
+                topic: wikimedia
+            client:
+                url: https://stream.wikimedia.org/v2/stream/recentchange

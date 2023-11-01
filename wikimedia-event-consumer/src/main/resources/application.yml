@@ -1,0 +1,22 @@
+spring:
+    config:
+        import: optional:file:src/main/resources/application.yml
+    kafka:
+        bootstrap-servers: localhost:29092
+        consumer:
+            bootstrap-servers: localhost:29092
+            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            client-id: wikimedia
+            auto-offset-reset: earliest
+    data:
+        mongodb:
+            username: user
+            password: passwd
+            host: localhost
+            port: 27017
+            database: wikimedia
+            authentication-database: admin
+server:
+    port: 8090
+    shutdown: graceful

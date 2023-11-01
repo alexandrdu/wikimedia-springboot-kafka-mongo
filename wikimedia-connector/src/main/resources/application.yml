@@ -1,0 +1,12 @@
+spring:
+    config:
+        import: optional:file:src/main/resources/application.yml
+    kafka:
+        bootstrap-servers: localhost:29092
+        producer:
+            bootstrap-servers: localhost:29092
+            key-serializer: org.apache.kafka.common.serialization.StringSerializer
+            value-serializer: org.apache.kafka.common.serialization.StringSerializer
+server:
+    port: 8080
+    shutdown: graceful
